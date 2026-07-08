@@ -203,6 +203,7 @@
                 <button data-level="easy" class="active">初级</button>
                 <button data-level="medium">中级</button>
                 <button data-level="hard">高级</button>
+                <button data-level='wtf'>WTF</button>
             </div>
         </div>
 
@@ -224,7 +225,8 @@
         const LEVELS = {
             easy:   { rows: 9, cols: 9, mines: 10 },
             medium: { rows: 16, cols: 16, mines: 40 },
-            hard:   { rows: 16, cols: 30, mines: 99 }
+            hard:   { rows: 16, cols: 30, mines: 99 },
+            wtf:    { rows: 30, cols: 30, mines: 891}
         };
         // 当前状态
         let currentLevel = 'easy';
