@@ -199,7 +199,7 @@
 <div class="game-wrapper">
     <div class="game-container">
         <div class="header">
-            <div class="title">🟦 俄罗斯方块</div>
+            <div class="title">🟦 俄罗斯方块 (等方块)</div>
             <div class="score-area">
                 <div class="score-box"><span>分数</span><span id="scoreDisplay">0</span></div>
                 <button class="reset-btn" id="resetButton">↻</button>
@@ -284,7 +284,7 @@
         let linesCleared = 0;
         let gameOver = false;
         let fallInterval = null;
-        let intervalTime = 500; // ms
+        let intervalTime = 100; // ms
 
         // ----- 初始化网格 -----
         function initGrid() {
