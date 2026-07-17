@@ -171,7 +171,7 @@
     <div class="game-container">
         <!-- 头部 -->
         <div class="header">
-            <div class="title">“新概念”2048</div>
+            <div class="title">2048</div>
             <div class="score-area">
                 <div class="score-box"><span>分数</span><span id="scoreDisplay">0</span></div>
                 <button class="reset-btn" id="resetButton">↻</button>
@@ -271,7 +271,7 @@
             }
             if (empty.length === 0) return false;
             const {r, c} = empty[Math.floor(Math.random() * empty.length)];
-            grid[r][c] = Math.random() < 0.9 ? 2048 : 4096;
+            grid[r][c] = Math.random() < 0.9 ? 2 : 4;
             return true;
         }
 
@@ -372,7 +372,7 @@
             if (gameOver) return false;
             // 如果赢了且没选择继续，阻止操作
             if (winFlag && !continueAfterWin) {
-                statusMsg.innerText = '🎉 你赢了！点击↻继续挑战';
+                statusMsg.innerText = '🎉 你赢了！继续滑动或点击↻';
                 
                 // return false;
             }
@@ -535,7 +535,7 @@
         function handleKey(e) {
             const key = e.key;
             e.preventDefault();
-            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 's', 'a', 'd'].includes(key)) {
                 let dir = -1;
                 if (key === 'ArrowLeft' || key === 'a') dir = 0;
                 else if (key === 'ArrowRight' || key === 'd') dir = 1;
