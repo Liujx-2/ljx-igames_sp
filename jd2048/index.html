@@ -373,7 +373,8 @@
             // 如果赢了且没选择继续，阻止操作
             if (winFlag && !continueAfterWin) {
                 statusMsg.innerText = '🎉 你赢了！点击↻继续挑战';
-                return false;
+                
+                // return false;
             }
 
             let moved = false;
@@ -536,10 +537,10 @@
             e.preventDefault();
             if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
                 let dir = -1;
-                if (key === 'ArrowLeft' || key === 'A') dir = 0;
-                else if (key === 'ArrowRight' || key === 'D') dir = 1;
-                else if (key === 'ArrowUp' || key === 'W') dir = 2;
-                else if (key === 'ArrowDown' || key === 'S') dir = 3;
+                if (key === 'ArrowLeft' || key === 'a') dir = 0;
+                else if (key === 'ArrowRight' || key === 'd') dir = 1;
+                else if (key === 'ArrowUp' || key === 'w') dir = 2;
+                else if (key === 'ArrowDown' || key === 's') dir = 3;
                 if (dir !== -1) performMove(dir);
             }
         }
