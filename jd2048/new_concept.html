@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2048 · 经典离线</title>
+    <title>2048 · 新概念玩法</title>
     <style>
         * {
             box-sizing: border-box;
@@ -372,7 +372,7 @@
             if (gameOver) return false;
             // 如果赢了且没选择继续，阻止操作
             if (winFlag && !continueAfterWin) {
-                statusMsg.innerText = '🎉 你赢了！点击↻继续挑战';
+                statusMsg.innerText = '🎉 你赢了！继续滑动或点击↻';
                 
                 // return false;
             }
@@ -535,7 +535,7 @@
         function handleKey(e) {
             const key = e.key;
             e.preventDefault();
-            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 's', 'a', 'd'].includes(key)) {
                 let dir = -1;
                 if (key === 'ArrowLeft' || key === 'a') dir = 0;
                 else if (key === 'ArrowRight' || key === 'd') dir = 1;
